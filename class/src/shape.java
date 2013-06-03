@@ -1,11 +1,10 @@
 
+
+
 public class shape {
 
 	public double width;
 	public double height;
-
-	
-	
 	public shape(double w, double h) {
 		this.width = w;
 		
@@ -22,7 +21,7 @@ public class shape {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		
 		shape a = new shape(2,3);
 		shape b = new shape(6,9);
