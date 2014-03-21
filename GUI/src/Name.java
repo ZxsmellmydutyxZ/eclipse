@@ -20,6 +20,7 @@ public class Name {
 		frame.setContentPane(contentPane);
 		
 		frame.pack();
+		frame.setSize(200,100);
 		frame.setVisible(true);
 }		
 	
