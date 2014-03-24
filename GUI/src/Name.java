@@ -16,52 +16,54 @@ public class Name {
 		JButton button;
 		
 		public DisplayName(){
-		frame = new JFrame("My Name is...");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame = new JFrame("My Name is...");
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+				contentPane = new JPanel();
+				label = new JLabel(TEXT);
+				contentPane.add(label);
+				
+				frame.setContentPane(contentPane);
+				
+				frame.pack();
+				frame.setSize(200,100);
+				frame.setVisible(true);
+				
+				button = new JButton("Hide");
+				button.setActionCommand("Hide");
+				button.addActionListener(this);
+				contentPane.add(button);
+		}		
 		
-		contentPane = new JPanel();
-		label = new JLabel(TEXT);
-		contentPane.add(label);
+		public void actionPerformed(ActionEvent event){
+			String eventName = event.getActionCommand();
+			
+			if (eventName.equals("Hide")){
+				label.setText(" ");
+				button.setText("Show");
+				button.setActionCommand("Show");
+			} else {
+				label.setText(TEXT);
+				button.setText("Hide");
+				button.setActionCommand("Hide");
+			}	
+		}
 		
-		frame.setContentPane(contentPane);
-		
-		frame.pack();
-		frame.setSize(200,100);
-		frame.setVisible(true);
-		
-		button = new JButton("Hide");
-		button.setActionCommand("Hide");
-		button.addActionListener(this);
-		contentPane.add(button);
-}		
+		private static void runGUI(){
+			JFrame.setDefaultLookAndFeelDecorated(true);
+			new DisplayName();
+		}
 	
-	public void actionPerformed(ActionEvent event){
-		String eventName = event.getActionCommand();
 		
-		if (eventName.equals("Hide")){
-			label.setText(" ");
-			button.setText("Show");
-			button.setActionCommand("Show");
-		} else {
-			label.setText(TEXT);
-			button.setText("Hide");
-			button.setActionCommand("Show");
-		}	
-	}
-	
-	private static void runGUI(){
-		JFrame.setDefaultLookAndFeelDecorated(true);
-		new DisplayName();
-	}
-
-	
-	public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(new Runnable(){
-			public void run(){
-				runGUI();
-			}
-		});
-	}
+		public static void main(String[] args) {
+			javax.swing.SwingUtilities.invokeLater(new Runnable(){
+				public void run(){
+					runGUI();
+				}
+			});
+		}
+		
+		
 	}
 }
 
