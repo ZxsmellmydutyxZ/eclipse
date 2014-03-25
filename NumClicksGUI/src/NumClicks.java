@@ -28,7 +28,6 @@ import javax.swing.JPanel;
 		frame.setSize(210,70);
 		frame.setVisible(true);
 		
-		
 		button = new JButton("You have clicked " + clicks + " times.");
 		button.setActionCommand("Click");
 		button.addActionListener(this);
