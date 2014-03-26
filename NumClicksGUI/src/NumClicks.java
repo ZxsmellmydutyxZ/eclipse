@@ -44,6 +44,7 @@ import javax.swing.JPanel;
 			if(eventClick.equals("Click")){
 				clicks = clicks +1;
 				button.setText("You have clicked " + clicks + " times.");
+				contentPane.setBackground(new Color(0,0,255-(clicks*3)));
 			}
 		}
 		
