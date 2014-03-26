@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,6 +22,7 @@ import javax.swing.JPanel;
 		contentPane = new JPanel();
 		label = new JLabel();
 		contentPane.add(label);
+		contentPane.setBackground(Color.blue);
 		
 		frame.setContentPane(contentPane);
 		
@@ -41,8 +43,6 @@ import javax.swing.JPanel;
 			
 			if(eventClick.equals("Click")){
 				clicks = clicks +1;
-			}
-			if(eventClick.equals("Click")){
 				button.setText("You have clicked " + clicks + " times.");
 			}
 		}
