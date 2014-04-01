@@ -17,9 +17,9 @@ public class Lab24a
 		test.setSpot(8,2,9);
 		test.setSpot(7,8,9);
 		out.println("mat after changes \n"+test);
-		System.out.println("matrix row 0 total  = "+test.getRowTotal(0) + "\n");
-		System.out.println("matrix row 2 total = "+test.getRowTotal(2) + "\n");
-		System.out.println("matrix row 4 total = "+test.getRowTotal(4) + "\n");
-		System.out.println("matrix total = "+test.getTotal() + "\n\n");
+		System.out.println("Matrix row 0 total = "+test.getRowTotal(0));
+		System.out.println("Matrix row 2 total = "+test.getRowTotal(2));
+		System.out.println("Matrix row 4 total = "+test.getRowTotal(4));
+		System.out.println("Matrix total = "+test.getTotal());
 	}
 }
