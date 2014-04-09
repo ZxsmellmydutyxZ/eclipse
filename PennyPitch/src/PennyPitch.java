@@ -23,7 +23,7 @@ public class PennyPitch
 	public PennyPitch()
 	{
 
-	Board= new String [5][5];	
+	Board = new String [5][5];	
 	for (int row=0;row<Board.length; row ++)
 	{
 		for(int col=0; col<Board[0].length; col++)
@@ -56,15 +56,12 @@ public class PennyPitch
 
 	void placePrizeB()
 	{
-	
 		int row, col;		
 		int counter =0;
-	do
-	{				
-
+		
+		do{				
 		row= (int)(5*Math.random());
 		col=(int)(5*Math.random());
-				
 
 		if ( Board[row][col].equals("      ") && (Board[row][col] != (p2)) && (Board[row][col] != (p3)) && (Board[row][col] != (p4)) && (Board[row][col] != (p5)))
 		{				

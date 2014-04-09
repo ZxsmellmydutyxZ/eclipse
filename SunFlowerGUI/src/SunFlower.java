@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 	
 	public class SunFlower implements ActionListener{
 		public static String LATIN = "Helianthus";
-		public static String ENGLISH = "SunFlower";
+		public static String ENGLISH = "Sunflower";
 		JFrame frame;
 		JPanel contentPane;
 		JLabel label;

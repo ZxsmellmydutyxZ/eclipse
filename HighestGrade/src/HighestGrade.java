@@ -9,10 +9,12 @@ import java.util.Scanner;
 public class HighestGrade {
 
 	
+	private static Scanner scan;
+
 	public static void main(String[] args) {
 		
 		ArrayList<Integer> grade = new ArrayList<Integer>();
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		
 		int g = 0;
 		int high = 0;
