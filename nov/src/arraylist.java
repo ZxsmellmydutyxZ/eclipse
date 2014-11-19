@@ -33,7 +33,7 @@ public class arraylist {
 	
 	Random randy = new Random();
 
-	System.out.println(ar.get(randy.nextInt(ar.size())));
+	System.out.println("Get a " + ar.get(randy.nextInt(ar.size())));
 	
 	
 	}
