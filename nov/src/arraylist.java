@@ -12,28 +12,30 @@ public class arraylist {
 	ArrayList<String> ar = new ArrayList();
 	Scanner scan = new Scanner(System.in);
 	
-	String a;
+	int a;
 	String b;
 	String c;
 	String d;
 	String e;
 	
-	System.out.println("Enter 5 favorite board companies:");
-	a = scan.nextLine();
-	ar.add(a);
-	b = scan.nextLine();
-	ar.add(b);
-	c = scan.nextLine();
-	ar.add(c);
-	d = scan.nextLine();
-	ar.add(d);
-	e = scan.nextLine();
-	ar.add(e);
-	
-	
-	Random randy = new Random();
-
-	System.out.println("Get a " + ar.get(randy.nextInt(ar.size())));
+	while(true){
+		System.out.println("What do you want to do? (1 = list 2 = add)");
+		a = scan.nextInt();
+		b = scan.nextLine();
+		switch(a){
+		case 1:
+			for(String i : ar){
+			System.out.println(i);
+				
+			}	
+			break;
+		case 2:
+			System.out.println("Add something: ");
+			b = scan.nextLine();
+			ar.add(b);
+			break;
+		}
+	}
 	
 	
 	}
