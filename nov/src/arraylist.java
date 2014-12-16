@@ -19,11 +19,11 @@ public class arraylist {
 	String c;
 	String d;
 	String e;
-	
+	String name = " ";
 	
 	
 	while(true){
-		System.out.println("What do you want to do? (1 = list 2 = add 3 = save)");
+		System.out.println("What do you want to do? (1 = list | 2 = add | 3 = name file | 4 = save file)");
 		a = scan.nextInt();
 		b = scan.nextLine();
 		switch(a){
@@ -40,12 +40,19 @@ public class arraylist {
 			break;
 			
 		case 3:
-			FileWriter outFile = new FileWriter("/users/DuTy/Data.txt");  
+			
+			System.out.println("Enter file name: ");
+			name = scan.nextLine();
+		    
+		case 4:
+			
+			FileWriter outFile = new FileWriter(name); 
 		    BufferedWriter outStream = new BufferedWriter(outFile);  
 		    for (int k = 0; k < ar.size(); k++)  
 		        outStream.write(ar.get(k)+ "\r\n");     
 		    outStream.close();  
 		    System.out.println("Data saved.");  
+		    break;
 		}
 		
 		
