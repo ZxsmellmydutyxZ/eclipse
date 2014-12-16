@@ -46,7 +46,7 @@ public class arraylist {
 		    
 		case 4:
 			
-			FileWriter outFile = new FileWriter(name); 
+			FileWriter outFile = new FileWriter("Z:\ArrayListLabs"); 
 		    BufferedWriter outStream = new BufferedWriter(outFile);  
 		    for (int k = 0; k < ar.size(); k++)  
 		        outStream.write(ar.get(k)+ "\r\n");     
