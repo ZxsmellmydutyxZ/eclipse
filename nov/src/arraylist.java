@@ -1,4 +1,5 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,11 +20,11 @@ public class arraylist {
 	String c;
 	String d;
 	String e;
-	String name = " ";
+	
 	
 	
 	while(true){
-		System.out.println("What do you want to do? (1 = list | 2 = add | 3 = name file | 4 = save file)");
+		System.out.println("What do you want to do? (1 = list 2 = add 3 = save 4 = load)");
 		a = scan.nextInt();
 		b = scan.nextLine();
 		switch(a){
@@ -40,22 +41,48 @@ public class arraylist {
 			break;
 			
 		case 3:
-			
-			System.out.println("Enter file name: ");
-			name = scan.nextLine();
-		    
-		case 4:
-			
-			FileWriter outFile = new FileWriter("Z:\ArrayListLabs"); 
+			FileWriter outFile = new FileWriter("E:/Users/DuTy/poop.txt");  
 		    BufferedWriter outStream = new BufferedWriter(outFile);  
 		    for (int k = 0; k < ar.size(); k++)  
 		        outStream.write(ar.get(k)+ "\r\n");     
 		    outStream.close();  
 		    System.out.println("Data saved.");  
 		    break;
+		
+		case 4:
+			String name;
+			System.out.println("Enter the file name (exclude .txt)");
+			name = scan.nextLine();
+			
+			Scanner inFile1 = new Scanner(new File("E:/Users/DuTy/" + name + ".txt"));
+			
+			while (inFile1.hasNext()) {
+			      // find next line
+			      String token1 = inFile1.next();
+			      ar.add(token1);
+			    }
+			    inFile1.close();
+
+			    String[] tempsArray = ar.toArray(new String[0]);
+
+			    for (String s : tempsArray) {
+			      System.out.println(s);
+			    }
+			      break;
+			      
+			    
+			    
+			    case 5: 
+			    	  
+			    
+			    }
+
+		
+		
 		}
 		
 		
+		
 	}
 	
 	
@@ -63,4 +90,3 @@ public class arraylist {
 
 
 
-}
