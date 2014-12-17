@@ -25,7 +25,7 @@ public class arraylist {
 	
 	
 	while(true){
-		System.out.println("What do you want to do? (1 = list 2 = add 3 = save 4 = load)");
+		System.out.println("What do you want to do? (1 = list 2 = add 3 = save 4 = load 5 = clear)");
 		a = scan.nextInt();
 		b = scan.nextLine();
 		switch(a){
@@ -78,6 +78,7 @@ public class arraylist {
 			    
 			    case 5: 
 			    	  
+			    	ar.clear();
 			    
 			    }
 
