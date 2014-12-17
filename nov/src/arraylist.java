@@ -20,6 +20,7 @@ public class arraylist {
 	String c;
 	String d;
 	String e;
+	String name;
 	
 	
 	
@@ -41,7 +42,10 @@ public class arraylist {
 			break;
 			
 		case 3:
-			FileWriter outFile = new FileWriter("E:/Users/DuTy/poop.txt");  
+			System.out.println("Enter the file name: ");
+			name = scan.nextLine();
+			
+			FileWriter outFile = new FileWriter(name);  
 		    BufferedWriter outStream = new BufferedWriter(outFile);  
 		    for (int k = 0; k < ar.size(); k++)  
 		        outStream.write(ar.get(k)+ "\r\n");     
@@ -50,11 +54,11 @@ public class arraylist {
 		    break;
 		
 		case 4:
-			String name;
-			System.out.println("Enter the file name (exclude .txt)");
+			
+			System.out.println("Enter the file name: ");
 			name = scan.nextLine();
 			
-			Scanner inFile1 = new Scanner(new File("E:/Users/DuTy/" + name + ".txt"));
+			Scanner inFile1 = new Scanner(new File(name));
 			
 			while (inFile1.hasNext()) {
 			     
