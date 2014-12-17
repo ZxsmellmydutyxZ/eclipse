@@ -57,7 +57,7 @@ public class arraylist {
 			Scanner inFile1 = new Scanner(new File("E:/Users/DuTy/" + name + ".txt"));
 			
 			while (inFile1.hasNext()) {
-			      // find next line
+			     
 			      String token1 = inFile1.next();
 			      ar.add(token1);
 			    }
